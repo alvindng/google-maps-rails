@@ -6,6 +6,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="assets/map.js" charset="utf-8"></script>
+    <%= javascript_include_tag src: "https://maps.googleapis.com/maps/api/js?key=#{ENV['GMAPS_API_KEY']}&callback=initMap" 'async defer'%>
   </head>
 
   <body>
